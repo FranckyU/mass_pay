@@ -41,11 +41,12 @@ Run `thor run:sample` to output the resulting grouped payouts
 
 Quite simple, just run `rake` or `rake test` to launch the test
 
-The test matrix covers 3 behaviors:
+The test matrix covers 4 behaviors:
 
 1. Empty collection should return empty result
 2. A given payouts flat collection should return a grouped payouts collection
-3. Recipients listed after a long string of a same recipient payouts are not penalized
+3. N payouts going to the same recipient should be splited in N groups (real world ~ only 1 payout per day)
+4. Recipients listed after a long string of a same recipient payouts are not penalized
 
 ## D. Internal implementation
 
