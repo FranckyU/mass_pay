@@ -34,7 +34,7 @@ module MassPay
       end
     end
 
-    next_round_batch = (payouts.any? && payouts + next_round_batch) || next_round_batch
+    next_round_batch = (payouts.any? && (payouts + next_round_batch)) || next_round_batch
 
     grouped << batch unless batch.empty?
     grouped = group_payouts_by_recipient(next_round_batch, max_group_size, grouped) if next_round_batch.any?
