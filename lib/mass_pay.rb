@@ -12,7 +12,7 @@ module MassPay
     group_payouts_by_recipient(payouts, max_group_size)
   end
 
-  def group_payouts_by_recipient(payouts, max_group_size, grouped = [])
+  private_class_method def group_payouts_by_recipient(payouts, max_group_size, grouped = [])
     batch = []
     next_round_batch = []
     emails = {}
